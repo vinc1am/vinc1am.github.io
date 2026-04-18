@@ -1,0 +1,89 @@
+{
+  "projects": [
+    {
+      "id": "trading-dash",
+      "name": "Trading Dash",
+      "heroImage": "https://raw.githubusercontent.com/vinc1am/trading-dash/main/assets/images/hero.png",
+      "description": "Stocks algo-trading, portfolio optimisation, and visualisation.",
+      "details": "Trading Dash is a Full Stack trading decision making application that offers stock data extraction, implements momentum algorithmic trading, optimizes portfolios, and provides sophisticated data visualisation.",
+      "gallery": [
+        "https://raw.githubusercontent.com/vinc1am/trading-dash/main/assets/images/pj04-img02.png",
+        "https://raw.githubusercontent.com/vinc1am/trading-dash/main/assets/images/pj_gif_1.gif",
+        "https://raw.githubusercontent.com/vinc1am/trading-dash/main/assets/images/pj_gif_2.gif",
+        "https://raw.githubusercontent.com/vinc1am/trading-dash/main/assets/images/pj_gif_3.gif"
+      ],
+      "tags": {
+        "section": ["aiml", "investment", "vis", "crawling"],
+        "other": []
+      },
+      "github": "https://github.com/vinc1am/trading-dash"
+    },
+    {
+      "id": "customer-review-classifier",
+      "name": "Customer Review Classifier",
+      "heroImage": "https://raw.githubusercontent.com/vinc1am/customer-review-classifier/main/img/icon.png",
+      "description": "Simple App to analyse and classify the customer reviews.",
+      "details": "Customer Review Classifier is an application to demonstrate the usage of LLM to analyze and classify reviews into different categories with detailed explanations.",
+      "gallery": [
+        "https://raw.githubusercontent.com/vinc1am/customer-review-classifier/main/img/pj05-img02.png",
+        "https://raw.githubusercontent.com/vinc1am/customer-review-classifier/main/img/gif_1.gif"
+      ],
+      "tags": {
+        "section": ["aiml", "nlp"],
+        "other": []
+      },
+      "github": "https://github.com/vinc1am/customer-review-classifier"
+    },
+    {
+      "id": "freight-hs-classifier",
+      "name": "Commodity HS Code Classifier",
+      "heroImage": "https://raw.githubusercontent.com/vinc1am/freight-hs-classifier/main/img/pj06.png",
+      "description": "Streamlining shipping with automated HS code classification for freight cargo.",
+      "details": "Uses a graph database to find the most similar HS code definitions based on user-input cargo descriptions.",
+      "gallery": [
+        "https://raw.githubusercontent.com/vinc1am/freight-hs-classifier/main/img/pj06-img01.png",
+        "https://raw.githubusercontent.com/vinc1am/freight-hs-classifier/main/img/pj_gif_1.gif",
+        "https://raw.githubusercontent.com/vinc1am/freight-hs-classifier/main/img/pj_gif_2.gif"
+      ],
+      "tags": {
+        "section": ["aiml", "nlp", "vis"],
+        "other": []
+      },
+      "github": "https://github.com/vinc1am/freight-hs-classifier"
+    },
+    {
+      "id": "company-insight-llm",
+      "name": "Company Insight Assistant",
+      "heroImage": "https://raw.githubusercontent.com/vinc1am/company-insight-llm/main/img/icon.png",
+      "description": "Quick Company Analysis through Examination of Webpages, News, and Annual Reports.",
+      "details": "Company Insight Assistant is a simple application designed to swiftly analyze company backgrounds by examining and analyzing webpages, news articles, and annual reports.",
+      "gallery": [
+        "https://raw.githubusercontent.com/vinc1am/company-insight-llm/main/img/pj02-img01.png",
+        "https://raw.githubusercontent.com/vinc1am/company-insight-llm/main/img/gif_1.gif",
+        "https://raw.githubusercontent.com/vinc1am/company-insight-llm/main/img/gif_2.gif",
+        "https://raw.githubusercontent.com/vinc1am/company-insight-llm/main/img/gif_3.gif"
+      ],
+      "tags": {
+        "section": ["aiml", "nlp", "crawling"],
+        "other": []
+      },
+      "github": "https://github.com/vinc1am/company-insight-llm"
+    },
+    {
+      "id": "meeting-ai-pod",
+      "name": "Meeting AI Pod",
+      "heroImage": "https://raw.githubusercontent.com/vinc1am/meeting-ai-pod/main/static/img/icon.png",
+      "description": "Mini AI Pod to quickly transcribe and analyse the meeting audio.",
+      "details": "Meeting AI Pod is a simple application to demonstrate the usage of Azure Speech Recognition Service and OpenAI to transcribe and analyze meeting audio into a transcript, summary, and meeting minutes. It also supports the Q&A feature on the meeting transcript.",
+      "gallery": [
+        "https://raw.githubusercontent.com/vinc1am/meeting-ai-pod/main/static/img/pj03-img01.png",
+        "https://raw.githubusercontent.com/vinc1am/meeting-ai-pod/main/static/img/gif_1.gif"
+      ],
+      "tags": {
+        "section": ["aiml", "speech", "nlp"],
+        "other": []
+      },
+      "github": "https://github.com/vinc1am/meeting-ai-pod"
+    }
+  ]
+}

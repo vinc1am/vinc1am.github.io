@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Vincent Lam — ML &amp; AI specialist. Turning business needs into practical AI solutions."
+    />
+    <title>Vincent Lam · Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Outfit:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/gallery.css" />
+  </head>
+  <body>
+    <div class="noise" aria-hidden="true"></div>
+    <div class="glow glow--1" aria-hidden="true"></div>
+    <div class="glow glow--2" aria-hidden="true"></div>
+
+    <header class="site-header" id="top">
+      <nav class="nav" aria-label="Primary">
+        <a class="nav__brand" href="#top">
+          <img
+            class="nav__brand-avatar"
+            src="https://avatars.githubusercontent.com/u/73224512?v=4"
+            width="32"
+            height="32"
+            alt=""
+            decoding="async"
+          />
+          <span class="nav__brand-text">Vincent Lam</span>
+        </a>
+        <button
+          class="nav__toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="nav-menu"
+        >
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-label">Menu</span>
+        </button>
+        <ul class="nav__links" id="nav-menu">
+          <li><a href="#featured">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#certifications">Certifications</a></li>
+          <li class="nav__social">
+            <a
+              href="mailto:vlianmcent@gmail.com"
+              class="nav__icon-link"
+              aria-label="Email"
+            >
+              <svg class="nav__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path
+                  fill="currentColor"
+                  d="M20 4H4C2.9 4 2 4.9 2 6v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://github.com/vinc1am"
+              class="nav__icon-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+            >
+              <svg class="nav__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path
+                  fill="currentColor"
+                  d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/vinc1am/"
+              class="nav__icon-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              <svg class="nav__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path
+                  fill="currentColor"
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero section" aria-labelledby="hero-title">
+        <div class="hero__grid">
+          <p class="hero__eyebrow reveal" data-reveal>Welcome to my page!</p>
+          <h1 id="hero-title" class="hero__title reveal" data-reveal>
+            <span class="hero__headline">
+              <span class="hero__static">Hi, I’m </span
+              ><span class="hero__rotating-wrap" aria-live="polite"
+                ><span id="hero-rotating" class="hero__rotating">Vincent Lam</span></span
+              >
+            </span>
+          </h1>
+          <p class="hero__lead reveal" data-reveal>
+            I specialise in machine learning and AI, helping teams turn business needs into
+            practical AI solutions—from data to deployment.
+          </p>
+          <div class="hero__actions reveal" data-reveal>
+            <a class="btn btn--primary" href="#featured">View projects</a>
+            <a class="btn btn--ghost" href="#experience">My experience</a>
+          </div>
+          <div class="hero__profile-wrap reveal" data-reveal>
+            <aside class="hero__panel hero__panel--image" aria-label="Profile photo">
+              <img
+                class="hero__highlights-img"
+                src="assets/profile.png"
+                width="893"
+                height="893"
+                alt="Vincent Lam — profile"
+                decoding="async"
+                fetchpriority="high"
+              />
+            </aside>
+            <div class="hero__sketch">
+              <span class="hero__sketch-text">My Princes!</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--tight section--gallery" id="featured" aria-labelledby="featured-title">
+        <div class="section__head section__head--gallery-intro reveal" data-reveal>
+          <h2 id="featured-title" class="section__heading">Hobby Projects</h2>
+        </div>
+        <div class="gallery-filters gallery-filters--panel reveal" data-reveal role="toolbar" aria-label="Filter projects">
+          <button type="button" class="gallery-filter-btn is-active" data-filter="aiml">AI &amp; ML</button>
+          <button type="button" class="gallery-filter-btn" data-filter="nlp">NLP</button>
+          <button type="button" class="gallery-filter-btn" data-filter="speech">Speech</button>
+          <button type="button" class="gallery-filter-btn" data-filter="crawling">Crawling</button>
+          <button type="button" class="gallery-filter-btn" data-filter="investment">Investment</button>
+          <button type="button" class="gallery-filter-btn" data-filter="vis">Data Visualisation</button>
+          <a
+            class="gallery-filter-btn gallery-filter-btn--more"
+            href="https://github.com/vinc1am"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open GitHub profile in a new tab"
+          >
+            More
+            <img
+              class="gallery-filter-btn__icon"
+              src="assets/github-mark.svg"
+              width="18"
+              height="18"
+              alt=""
+              aria-hidden="true"
+            />
+          </a>
+        </div>
+        <div id="gallery-grid" class="gallery-grid gallery-grid--embed"></div>
+      </section>
+
+      <section class="section section--resume" id="experience" aria-labelledby="resume-title">
+        <div class="section__head reveal" data-reveal>
+          <h2 id="resume-title" class="section__heading">Career &amp; Education</h2>
+        </div>
+        <div class="resume-unified reveal" data-reveal>
+          <div class="resume-panel resume-panel--interactive" data-timeline-interactive>
+            <div class="timeline-rail-scroll">
+              <div class="timeline-rail-line" aria-hidden="true"></div>
+              <ol class="timeline-rail" role="tablist" aria-label="Career and education timeline">
+                <li class="timeline-rail__item">
+                  <button
+                    type="button"
+                    class="timeline-rail__btn is-active"
+                    role="tab"
+                    aria-selected="true"
+                    tabindex="0"
+                    aria-controls="timeline-detail-card"
+                    data-timeline-index="0"
+                    id="timeline-rail-0"
+                  >
+                    <span class="timeline-rail__node" aria-hidden="true"></span>
+                    <span class="timeline-rail__meta">
+                      <span class="timeline-rail__year">PRESENT</span>
+                    </span>
+                  </button>
+                </li>
+                <li class="timeline-rail__item">
+                  <button
+                    type="button"
+                    class="timeline-rail__btn"
+                    role="tab"
+                    aria-selected="false"
+                    tabindex="-1"
+                    aria-controls="timeline-detail-card"
+                    data-timeline-index="1"
+                    id="timeline-rail-1"
+                  >
+                    <span class="timeline-rail__node" aria-hidden="true"></span>
+                    <span class="timeline-rail__meta">
+                      <span class="timeline-rail__year">2025</span>
+                    </span>
+                  </button>
+                </li>
+                <li class="timeline-rail__item">
+                  <button
+                    type="button"
+                    class="timeline-rail__btn"
+                    role="tab"
+                    aria-selected="false"
+                    tabindex="-1"
+                    aria-controls="timeline-detail-card"
+                    data-timeline-index="2"
+                    id="education"
+                  >
+                    <span class="timeline-rail__node" aria-hidden="true"></span>
+                    <span class="timeline-rail__meta">
+                      <span class="timeline-rail__year">2023</span>
+                    </span>
+                  </button>
+                </li>
+                <li class="timeline-rail__item">
+                  <button
+                    type="button"
+                    class="timeline-rail__btn"
+                    role="tab"
+                    aria-selected="false"
+                    tabindex="-1"
+                    aria-controls="timeline-detail-card"
+                    data-timeline-index="3"
+                    id="timeline-rail-3"
+                  >
+                    <span class="timeline-rail__node" aria-hidden="true"></span>
+                    <span class="timeline-rail__meta">
+                      <span class="timeline-rail__year">2022</span>   
+                    </span>
+                  </button>
+                </li>
+                <li class="timeline-rail__item">
+                  <button
+                    type="button"
+                    class="timeline-rail__btn"
+                    role="tab"
+                    aria-selected="false"
+                    tabindex="-1"
+                    aria-controls="timeline-detail-card"
+                    data-timeline-index="4"
+                    id="timeline-rail-4"
+                  >
+                    <span class="timeline-rail__node" aria-hidden="true"></span>
+                    <span class="timeline-rail__meta">
+                      <span class="timeline-rail__year">2021</span>
+                    </span>
+                  </button>
+                </li>
+                <li class="timeline-rail__item">
+                  <button
+                    type="button"
+                    class="timeline-rail__btn"
+                    role="tab"
+                    aria-selected="false"
+                    tabindex="-1"
+                    aria-controls="timeline-detail-card"
+                    data-timeline-index="5"
+                    id="timeline-rail-5"
+                  >
+                    <span class="timeline-rail__node" aria-hidden="true"></span>
+                    <span class="timeline-rail__meta">
+                      <span class="timeline-rail__year">2020</span>
+                    </span>
+                  </button>
+                </li>
+                <li class="timeline-rail__item">
+                  <button
+                    type="button"
+                    class="timeline-rail__btn"
+                    role="tab"
+                    aria-selected="false"
+                    tabindex="-1"
+                    aria-controls="timeline-detail-card"
+                    data-timeline-index="6"
+                    id="timeline-rail-6"
+                  >
+                    <span class="timeline-rail__node" aria-hidden="true"></span>
+                    <span class="timeline-rail__meta">
+                      <span class="timeline-rail__year">2018</span>
+                    </span>
+                  </button>
+                </li>
+              </ol>
+            </div>
+            <div
+              class="timeline-detail"
+              id="timeline-detail"
+              role="tabpanel"
+              aria-live="polite"
+              aria-labelledby="timeline-rail-0"
+            >
+              <article class="timeline-detail__card timeline__card timeline__card--has-logo" id="timeline-detail-card">
+                <div class="timeline__body">
+                  <p class="timeline__kind">Career</p>
+                  <h4 class="timeline__role">Senior Data Scientist</h4>
+                  <p class="timeline__org">The Hong Kong Jockey Club</p>
+                  <p class="timeline__text">
+                    AI Solution for Membership and Customer Experience Excellence.
+                  </p>
+                </div>
+                <div class="timeline__logo" aria-hidden="true">
+                  <img
+                    src="https://media.licdn.com/dms/image/v2/D560BAQElfllOLUrgYA/company-logo_100_100/B56ZriQYz3LAAQ-/0/1764732538945/hkjc_logo?e=1778112000&amp;v=beta&amp;t=fiiN0_EfkGlDlWLMFEcsFtuKq3kF3UvpWiqYDmKMuLg"
+                    alt=""
+                    width="72"
+                    height="72"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+              </article>
+            </div>
+            <div class="timeline-stash" hidden aria-hidden="true">
+              <article class="timeline-stash__card timeline__card timeline__card--has-logo" data-timeline-index="0">
+                <div class="timeline__body">
+                  <p class="timeline__kind">Career</p>
+                  <h4 class="timeline__role">Senior Data Scientist</h4>
+                  <p class="timeline__org">The Hong Kong Jockey Club</p>
+                  <p class="timeline__text">
+                    AI Solution for Membership and Customer Experience Excellence.
+                  </p>
+                </div>
+                <div class="timeline__logo" aria-hidden="true">
+                  <img
+                    src="https://media.licdn.com/dms/image/v2/D560BAQElfllOLUrgYA/company-logo_100_100/B56ZriQYz3LAAQ-/0/1764732538945/hkjc_logo?e=1778112000&amp;v=beta&amp;t=fiiN0_EfkGlDlWLMFEcsFtuKq3kF3UvpWiqYDmKMuLg"
+                    alt=""
+                    width="72"
+                    height="72"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+              </article>
+              <article class="timeline-stash__card timeline__card timeline__card--has-logo" data-timeline-index="1">
+                <div class="timeline__body">
+                  <p class="timeline__kind">Career</p>
+                  <h4 class="timeline__role">Data Scientist</h4>
+                  <p class="timeline__org">DBS Bank</p>
+                  <p class="timeline__text">
+                    Data science for banking and digital initiatives—modeling, analytics, and AI solutions that
+                    support business and customer outcomes.
+                  </p>
+                </div>
+                <div class="timeline__logo" aria-hidden="true">
+                  <img
+                    src="https://media.licdn.com/dms/image/v2/C560BAQGR_4ugVU6t4Q/company-logo_100_100/company-logo_100_100/0/1662951257963/dbs_bank_logo?e=1778112000&amp;v=beta&amp;t=CfkbJUf95iy3kIi11ekX99s1T5UpWPc8nflXr4iMkTM"
+                    alt=""
+                    width="72"
+                    height="72"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+              </article>
+              <article class="timeline-stash__card timeline__card timeline__card--has-logo" data-timeline-index="2">
+                <div class="timeline__body">
+                  <p class="timeline__kind">Education</p>
+                  <h4 class="timeline__role">
+                    MSc, Data Driven Modeling
+                    <span class="timeline__gpa">CGA 4.2</span>
+                  </h4>
+                  <p class="timeline__org">Hong Kong University of Science and Technology</p>
+                  <p class="timeline__text">
+                    Top 5% ranking; best final-year project; Best Presenter; invited to share on consultancy
+                    and AI in an expert session.
+                  </p>
+                </div>
+                <div class="timeline__logo" aria-hidden="true">
+                  <img
+                    src="https://media.licdn.com/dms/image/v2/D560BAQGQKg98EcfHTw/company-logo_100_100/B56ZrxjxGdL8AQ-/0/1764989277143/hkust_logo?e=1778112000&amp;v=beta&amp;t=O_Eqndz6DQ37fEQ15H5hT_iotDQmlz7no2fWOTosrbk"
+                    alt=""
+                    width="72"
+                    height="72"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+              </article>
+              <article class="timeline-stash__card timeline__card timeline__card--has-logo" data-timeline-index="3">
+                <div class="timeline__body">
+                  <p class="timeline__kind">Career</p>
+                  <h4 class="timeline__role">Lead AI Consultant</h4>
+                  <p class="timeline__org">NCS Group</p>
+                  <p class="timeline__text">
+                    Data scientist and solutions architect for AI/ML and cloud delivery; leading an AI team
+                    delivering industry solutions.
+                  </p>
+                </div>
+                <div class="timeline__logo" aria-hidden="true">
+                  <img
+                    src="https://media.licdn.com/dms/image/v2/C4D0BAQFxBZqArwK5ZQ/company-logo_100_100/company-logo_100_100/0/1635497135829/ncs_group_logo?e=1778112000&amp;v=beta&amp;t=_MS-mJJbyL7QBodQNbEtRv_oN1e3B-LS6t7O71JMBO8"
+                    alt=""
+                    width="72"
+                    height="72"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+              </article>
+              <article class="timeline-stash__card timeline__card timeline__card--has-logo" data-timeline-index="4">
+                <div class="timeline__body">
+                  <p class="timeline__kind">Career</p>
+                  <h4 class="timeline__role">Data Scientist</h4>
+                  <p class="timeline__org">The Hong Kong Jockey Club</p>
+                  <p class="timeline__text">
+                    Speech recognition and NLP for digital experiences, including an intelligent voice betting
+                    system; automated operational reporting.
+                  </p>
+                </div>
+                <div class="timeline__logo" aria-hidden="true">
+                  <img
+                    src="https://media.licdn.com/dms/image/v2/D560BAQElfllOLUrgYA/company-logo_100_100/B56ZriQYz3LAAQ-/0/1764732538945/hkjc_logo?e=1778112000&amp;v=beta&amp;t=fiiN0_EfkGlDlWLMFEcsFtuKq3kF3UvpWiqYDmKMuLg"
+                    alt=""
+                    width="72"
+                    height="72"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+              </article>
+              <article class="timeline-stash__card timeline__card timeline__card--has-logo" data-timeline-index="5">
+                <div class="timeline__body">
+                  <p class="timeline__kind">Career</p>
+                  <h4 class="timeline__role">Data Analyst</h4>
+                  <p class="timeline__org">Swire Resources Ltd.</p>
+                  <p class="timeline__text">
+                    Tableau dashboards and a hybrid recommendation model for merchandising and customer
+                    experience.
+                  </p>
+                </div>
+                <div class="timeline__logo" aria-hidden="true">
+                  <img
+                    src="https://media.licdn.com/dms/image/v2/D560BAQGYXOMTh0g6Kw/company-logo_100_100/B56Zr7mYIvH8AU-/0/1765157733309/swire_resources_limited_logo?e=1778112000&amp;v=beta&amp;t=8KJV5O3ovo9qFTKG1chonC5kgfrCd-tw1VtivHLmjFY"
+                    alt=""
+                    width="72"
+                    height="72"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+              </article>
+              <article class="timeline-stash__card timeline__card timeline__card--paired" data-timeline-index="6">
+                <div class="timeline-pair">
+                  <div class="timeline__body">
+                    <p class="timeline__kind">Career</p>
+                    <h4 class="timeline__role">Graduation Trainee</h4>
+                    <p class="timeline__org">Hong Kong Telecom Ltd.</p>
+                    <p class="timeline__text">
+                      Market scraping for insights and a churn model to guide retention strategy.
+                    </p>
+                  </div>
+                  <div class="timeline__logo" aria-hidden="true">
+                    <img
+                      src="https://media.licdn.com/dms/image/v2/D560BAQEWrmnK5INIzQ/company-logo_100_100/B56ZryafR1LIAQ-/0/1765003625624?e=1778112000&amp;v=beta&amp;t=uxlo_6h3X7tg-jNs7OhXcpCVLK9wjpLRxMi_36xkHe0"
+                      alt=""
+                      width="72"
+                      height="72"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                </div>
+                <div class="timeline-pair timeline-pair--split">
+                  <div class="timeline__body">
+                    <p class="timeline__kind">Education</p>
+                    <h4 class="timeline__role">
+                      BBA, Business Analysis
+                      <span class="timeline__gpa">CGA 3.6</span>
+                    </h4>
+                    <p class="timeline__org">City University of Hong Kong</p>
+                    <p class="timeline__text">
+                      First Class Honours; multiple scholarships for academic performance.
+                    </p>
+                  </div>
+                  <div class="timeline__logo" aria-hidden="true">
+                    <img
+                      src="https://media.licdn.com/dms/image/v2/D560BAQF8ULyEjIFBSg/company-logo_100_100/B56ZrxnQ4ILwAQ-/0/1764990194050/cityu_logo?e=1778112000&amp;v=beta&amp;t=puumLfJN-NQCWytudSROAwm6PCF2GOfMTG1_GUvuvc0"
+                      alt=""
+                      width="72"
+                      height="72"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="certifications" aria-labelledby="certs-title">
+        <div class="section__head reveal" data-reveal>
+          <h2 id="certs-title" class="section__heading">Certifications</h2>
+        </div>
+        <div class="cert-block reveal" data-reveal data-cert-tabs>
+          <div class="cert-toolbar" role="tablist" aria-label="Certification categories">
+            <button
+              type="button"
+              class="cert-tab is-active"
+              role="tab"
+              id="cert-tab-aws"
+              aria-selected="true"
+              aria-controls="cert-panel-aws"
+              tabindex="0"
+            >
+              AWS
+            </button>
+            <button
+              type="button"
+              class="cert-tab"
+              role="tab"
+              id="cert-tab-microsoft"
+              aria-selected="false"
+              aria-controls="cert-panel-microsoft"
+              tabindex="-1"
+            >
+              Microsoft
+            </button>
+            <button
+              type="button"
+              class="cert-tab"
+              role="tab"
+              id="cert-tab-sas"
+              aria-selected="false"
+              aria-controls="cert-panel-sas"
+              tabindex="-1"
+            >
+              SAS
+            </button>
+            <button
+              type="button"
+              class="cert-tab"
+              role="tab"
+              id="cert-tab-others"
+              aria-selected="false"
+              aria-controls="cert-panel-others"
+              tabindex="-1"
+            >
+              Others
+            </button>
+          </div>
+          <div class="cert-panels">
+            <div class="cert-panel" id="cert-panel-aws" role="tabpanel" aria-labelledby="cert-tab-aws">
+              <div class="cert-grid">
+                <article class="cert-card">
+                  <div class="cert-card__badge">
+                    <img
+                      src="https://images.credly.com/size/680x680/images/4d4693bb-530e-4bca-9327-de07f3aa2348/image.png"
+                      alt=""
+                      width="200"
+                      height="200"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <h3 class="cert-card__title">AWS Certified AI Practitioner</h3>
+                </article>
+                <article class="cert-card">
+                  <div class="cert-card__badge">
+                    <img
+                      src="https://images.credly.com/size/680x680/images/6430efe4-0ac0-4df6-8f1b-9559d8fcdf27/image.png"
+                      alt=""
+                      width="200"
+                      height="200"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <h3 class="cert-card__title">AWS Certified Data Analytics</h3>
+                </article>
+                <article class="cert-card">
+                  <div class="cert-card__badge">
+                    <img
+                      src="https://images.credly.com/size/680x680/images/778bde6c-ad1c-4312-ac33-2fa40d50a147/image.png"
+                      alt=""
+                      width="200"
+                      height="200"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <h3 class="cert-card__title">AWS Certified Machine Learning</h3>
+                </article>
+              </div>
+            </div>
+            <div
+              class="cert-panel"
+              id="cert-panel-microsoft"
+              role="tabpanel"
+              aria-labelledby="cert-tab-microsoft"
+              hidden
+            >
+              <div class="cert-grid">
+                <article class="cert-card">
+                  <div class="cert-card__badge">
+                    <img
+                      src="https://images.credly.com/size/680x680/images/61542181-0e8d-496c-a17c-3d4bf590eda1/azure-data-engineer-associate-600x600.png"
+                      alt=""
+                      width="200"
+                      height="200"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <h3 class="cert-card__title">Microsoft Certified: Azure Data Engineer</h3>
+                </article>
+                <article class="cert-card">
+                  <div class="cert-card__badge">
+                    <img
+                      src="https://images.credly.com/size/680x680/images/5c8fca38-b0d2-49e5-9ad2-f3f8e79b327f/azure-data-scientist-associate-600x600.png"
+                      alt=""
+                      width="200"
+                      height="200"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <h3 class="cert-card__title">Microsoft Certified: Azure Data Scientist</h3>
+                </article>
+                <article class="cert-card">
+                  <div class="cert-card__badge">
+                    <img
+                      src="https://images.credly.com/size/680x680/images/619f60f8-4f63-4772-910e-dc31c6f2f7e8/image.png"
+                      alt=""
+                      width="200"
+                      height="200"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <h3 class="cert-card__title">Microsoft Certified: Power BI Data Analyst</h3>
+                </article>
+                <article class="cert-card">
+                  <div class="cert-card__badge">
+                    <img
+                      src="https://images.credly.com/size/680x680/images/61f56aa4-16fd-403c-90bc-1d90dba1fa99/image.png"
+                      alt=""
+                      width="200"
+                      height="200"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <h3 class="cert-card__title">Microsoft Certified: Azure AI Engineer</h3>
+                </article>
+              </div>
+            </div>
+            <div class="cert-panel" id="cert-panel-sas" role="tabpanel" aria-labelledby="cert-tab-sas" hidden>
+              <div class="cert-grid">
+                <article class="cert-card">
+                  <div class="cert-card__badge">
+                    <img
+                      src="https://images.credly.com/size/680x680/images/f0e36dbb-e83a-4637-a162-9b1191db80c6/new_certification_badge_image.png"
+                      alt=""
+                      width="200"
+                      height="200"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <h3 class="cert-card__title">SAS Certified Statistical Business Analyst</h3>
+                </article>
+                <article class="cert-card">
+                  <div class="cert-card__badge">
+                    <img
+                      src="https://images.credly.com/size/680x680/images/6c4901e5-dba5-4987-960b-4da4df5659bc/new_certification_badge_image.png"
+                      alt=""
+                      width="200"
+                      height="200"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <h3 class="cert-card__title">SAS Certified Professional: Advanced Programming</h3>
+                </article>
+                <article class="cert-card">
+                  <div class="cert-card__badge">
+                    <img
+                      src="https://images.credly.com/size/680x680/images/de31048c-1619-40fa-8f24-e27c6061c137/new_certification_badge_image.png"
+                      alt=""
+                      width="200"
+                      height="200"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <h3 class="cert-card__title">SAS Certified Base Programmer</h3>
+                </article>
+              </div>
+            </div>
+            <div class="cert-panel" id="cert-panel-others" role="tabpanel" aria-labelledby="cert-tab-others" hidden>
+              <div class="cert-grid">
+                <article class="cert-card">
+                  <div class="cert-card__badge">
+                    <img
+                      src="https://miro.medium.com/v2/resize:fit:520/1*bXJLYzkRm15aUxTARwD-dA.png"
+                      alt=""
+                      width="200"
+                      height="200"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <h3 class="cert-card__title">Google Professional Machine Learning Engineer</h3>
+                </article>
+                <article class="cert-card">
+                  <div class="cert-card__badge">
+                    <img
+                      src="https://miro.medium.com/v2/resize:fit:400/1*iJtqrGmBS7uFqJVOh0QwKA.png"
+                      alt=""
+                      width="200"
+                      height="200"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <h3 class="cert-card__title">TensorFlow Developer Certificate</h3>
+                </article>
+                <article class="cert-card">
+                  <div class="cert-card__badge">
+                    <img
+                      src="https://images.credly.com/size/680x680/images/ef3e7933-f1f1-4bba-9b10-f278188c72ad/image.png"
+                      alt=""
+                      width="200"
+                      height="200"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <h3 class="cert-card__title">Tableau Desktop Specialist</h3>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--contact" id="contact" aria-labelledby="contact-title">
+        <div class="contact-panel reveal" data-reveal>
+          <p class="section__eyebrow contact-panel__eyebrow">Let’s talk</p>
+          <h2 id="contact-title" class="contact-panel__title">Interested to work together?</h2>
+          <ul class="contact-panel__actions">
+            <li>
+              <a
+                class="contact-panel__icon-link"
+                href="mailto:vlianmcent@gmail.com"
+                aria-label="Email vlianmcent@gmail.com"
+              >
+                <svg class="contact-panel__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path
+                    fill="currentColor"
+                    d="M20 4H4C2.9 4 2 4.9 2 6v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a
+                class="contact-panel__icon-link"
+                href="https://github.com/vinc1am"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub — vinc1am"
+              >
+                <svg class="contact-panel__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path
+                    fill="currentColor"
+                    d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a
+                class="contact-panel__icon-link"
+                href="https://www.linkedin.com/in/vinc1am/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn profile"
+              >
+                <svg class="contact-panel__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path
+                    fill="currentColor"
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <dialog id="gallery-modal" class="gallery-modal" aria-labelledby="gallery-modal-title">
+      <div class="gallery-modal__inner">
+        <div class="gallery-modal__head">
+          <div class="gallery-modal__intro">
+            <h2 id="gallery-modal-title" class="gallery-modal__title"></h2>
+            <a
+              id="gallery-modal-github"
+              class="gallery-modal__github"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              hidden
+            >
+              <img src="assets/github-mark.svg" width="18" height="18" alt="" aria-hidden="true" />
+              <span>View on GitHub</span>
+            </a>
+          </div>
+          <button type="button" class="gallery-modal__close" id="gallery-modal-close" aria-label="Close">
+            ×
+          </button>
+        </div>
+        <div class="gallery-modal__scroll">
+          <div class="gallery-carousel">
+            <img id="gallery-carousel-img" class="gallery-carousel__img" src="" alt="" />
+            <button type="button" class="gallery-carousel__nav gallery-carousel__prev" id="gallery-carousel-prev" aria-label="Previous image">
+              ‹
+            </button>
+            <button type="button" class="gallery-carousel__nav gallery-carousel__next" id="gallery-carousel-next" aria-label="Next image">
+              ›
+            </button>
+          </div>
+          <div id="gallery-carousel-dots" class="gallery-carousel__dots"></div>
+          <div id="gallery-modal-tags" class="gallery-modal__tags"></div>
+          <div class="gallery-modal__body">
+            <p id="gallery-modal-details" class="gallery-modal__details"></p>
+          </div>
+        </div>
+      </div>
+    </dialog>
+
+    <footer class="site-footer">
+      <p>© <span id="year"></span> Vincent Lam · Portfolio</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/gallery.js"></script>
+  </body>
+</html>
