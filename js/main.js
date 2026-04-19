@@ -21,6 +21,24 @@
     });
   }
 
+  var navBrand = document.querySelector(".nav__brand");
+  if (navBrand) {
+    navBrand.addEventListener("click", function (e) {
+      e.preventDefault();
+      var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      window.scrollTo({ top: 0, behavior: reduceMotion ? "auto" : "smooth" });
+      if (history.replaceState) {
+        history.replaceState(null, "", "#top");
+      } else {
+        window.location.hash = "#top";
+      }
+      if (navMenu && navToggle) {
+        navMenu.classList.remove("is-open");
+        navToggle.setAttribute("aria-expanded", "false");
+      }
+    });
+  }
+
   var revealEls = document.querySelectorAll("[data-reveal]");
   if ("IntersectionObserver" in window && revealEls.length) {
     var io = new IntersectionObserver(
