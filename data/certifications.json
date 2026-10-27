@@ -1,0 +1,40 @@
+{
+  "certifications": [
+    {
+      "vendor": "AWS",
+      "logo": "assets/logos/aws-cert.png",
+      "items": [
+        "AWS Certified AI Practitioner",
+        "AWS Certified Data Analytics",
+        "AWS Certified Machine Learning"
+      ]
+    },
+    {
+      "vendor": "Microsoft",
+      "logo": "assets/logos/microsoft-cert.png",
+      "items": [
+        "Azure Data Engineer",
+        "Azure Data Scientist",
+        "Azure AI Engineer",
+        "Power BI Data Analyst"
+      ]
+    },
+    {
+      "vendor": "Google",
+      "logo": "assets/logos/google-cert.png",
+      "items": [
+        "Google Professional Machine Learning Engineer",
+        "TensorFlow Developer Certificate"
+      ]
+    },
+    {
+      "vendor": "Others",
+      "items": [
+        "SAS Statistical Business Analyst",
+        "SAS Advanced Programming",
+        "SAS Base Programmer",
+        "Tableau Desktop Specialist"
+      ]
+    }
+  ]
+}

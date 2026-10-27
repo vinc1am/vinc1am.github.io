@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="14" fill="#0D1117"/>
+  <!-- V — left half, room to breathe -->
+  <path fill="#F7F7F4" d="M6 15h8.2L22 42.5 29.8 15H38L24.6 52h-9.2L6 15z"/>
+  <!-- L — clearer gap from V, longer foot, inset from right edge -->
+  <path fill="#F7F7F4" d="M40 15h8v27h10v10H40V15z"/>
+</svg>

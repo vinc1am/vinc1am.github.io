@@ -1,0 +1,88 @@
+{
+  "experience": [
+    {
+      "year": "Present",
+      "kind": "Career",
+      "role": "AI & ML Delivery",
+      "org": "Amazon Web Services",
+      "logo": "assets/logos/aws.png?v=2",
+      "text": "AI and machine learning delivery for cloud customers and partners."
+    },
+    {
+      "year": "Nov 2026",
+      "kind": "Career",
+      "role": "Senior Data Scientist",
+      "org": "The Hong Kong Jockey Club",
+      "logo": "assets/logos/hkjc.png?v=2",
+      "text": "AI & ML R&D and delivery, with ongoing support for data analytics."
+    },
+    {
+      "year": "Mar 2026",
+      "kind": "Career",
+      "role": "Data Scientist, Group Audit",
+      "org": "DBS Bank",
+      "logo": "assets/logos/dbs.png?v=2",
+      "text": "Data analysis and machine learning for audit, with AI-driven solutions to improve effectiveness and automation."
+    },
+    {
+      "year": "Feb 2025",
+      "kind": "Career",
+      "role": "Lead AI Consultant",
+      "org": "NCS Group",
+      "logo": "assets/logos/ncs.png?v=2",
+      "text": "Led an AI team delivering AI & ML solutions across insurance, wealth management, financial services, and public utilities."
+    },
+    {
+      "year": "Oct 2022",
+      "kind": "Career",
+      "role": "Data Scientist",
+      "org": "The Hong Kong Jockey Club",
+      "logo": "assets/logos/hkjc.png?v=2",
+      "text": "Built speech recognition models with NLP, and routine analytics on digital customer footprint and usage."
+    },
+    {
+      "year": "Oct 2021",
+      "kind": "Career",
+      "role": "Data Analyst",
+      "org": "Swire Resources Ltd.",
+      "logo": "assets/logos/swire.png",
+      "text": "Trained CRM recommendation models and data visualisation on digital footprint for campaign insights."
+    },
+    {
+      "year": "Dec 2020",
+      "kind": "Career",
+      "role": "Graduation Trainee",
+      "org": "Hong Kong Telecom Ltd.",
+      "logo": "assets/logos/hkt.png?v=2",
+      "text": "Daily analytics, campaign management, and model training for CRM."
+    },
+    {
+      "year": "2023",
+      "kind": "Education",
+      "role": "MSc, Data Driven Modeling",
+      "org": "The Hong Kong University of Science and Technology",
+      "grade": "4.2 / 4.3",
+      "logo": "assets/logos/hkust.png?v=6",
+      "achievements": [
+        "Graduated in the Top 5% of class",
+        "UGC TPG Fellowship Scholarship",
+        "Best Presenters Award for research on 'Herding Model for Properties Market'"
+      ]
+    },
+    {
+      "year": "2018",
+      "kind": "Education",
+      "role": "BBA, Business Analysis",
+      "org": "City University of Hong Kong",
+      "grade": "3.6 / 4.3",
+      "logo": "assets/logos/cityu.png",
+      "achievements": [
+        "First Class Honours",
+        "Dean's Lists",
+        "Department of MS Outstanding Student Prize",
+        "Student Development Scholarship",
+        "Predictive Analytics Award"
+      ]
+    }
+  ]
+}
