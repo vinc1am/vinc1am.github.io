@@ -9,19 +9,10 @@
   /* Fold toggle is independent of canvas boot — bind first */
   var stage = document.getElementById("corner-cat-stage");
   var fold = document.getElementById("cat-fold");
-  var bootStatus = document.getElementById("boot-status");
   var catHidden = false;
   var pauseCat = null; /* set after player boots */
   var resumeCat = null;
-
-  function finishBootStatus() {
-    if (!bootStatus) return;
-    bootStatus.classList.add("is-done");
-    bootStatus.setAttribute("aria-busy", "false");
-    window.setTimeout(function () {
-      if (bootStatus && bootStatus.parentNode) bootStatus.parentNode.removeChild(bootStatus);
-    }, 400);
-  }
+  var started = false;
 
   function setCatHidden(hidden) {
     catHidden = !!hidden;
@@ -56,6 +47,8 @@
   var SWITCH_SEC = 4.3;
   var SWITCH_FRAME = Math.round(SWITCH_SEC * FPS); /* 43 → frame_044.webp */
   var FRAME_COUNT = 200;
+  /* Fade in + play once the first ~1.6s of frames are contiguous */
+  var EARLY_FRAMES = 16;
   var BASES = [
     "assets/cat/play/1/frame_",
     "assets/cat/play/2/frame_"
@@ -89,8 +82,9 @@
   off.height = canvas.height;
   var offCtx = off.getContext("2d", { willReadFrequently: true, alpha: true });
 
-  var cats = [[], []];
-  var ready = [false, false];
+  var cats = [new Array(FRAME_COUNT), new Array(FRAME_COUNT)];
+  var ready = [false, false]; /* mostly-complete — safe to swap onto */
+  var earlyReady = [false, false];
   var frame = 0;
   var dir = 1;
   var cat = Math.random() < 0.5 ? 0 : 1;
@@ -125,37 +119,69 @@
     return (Math.random() * CHARS.length) | 0;
   }
 
-  function loadCat(catIdx) {
+  function loadFrame(catIdx, idx) {
     return new Promise(function (resolve) {
-      var loaded = 0;
-      var list = new Array(FRAME_COUNT);
-      var done = false;
+      var img = new Image();
+      img.decoding = "async";
+      img.onload = function () {
+        cats[catIdx][idx] = img;
+        resolve(true);
+      };
+      img.onerror = function () {
+        resolve(false);
+      };
+      img.src = frameUrl(catIdx, idx);
+    });
+  }
 
-      function finish() {
-        if (done) return;
-        done = true;
-        cats[catIdx] = list;
-        ready[catIdx] = list.filter(Boolean).length > FRAME_COUNT * 0.9;
-        resolve(ready[catIdx]);
-      }
+  /* Contiguous playable end from frame 0 (expands as more frames arrive). */
+  function playableEnd(catIdx) {
+    var list = cats[catIdx];
+    if (!list) return 0;
+    var i = 0;
+    while (i < FRAME_COUNT && list[i]) i++;
+    return Math.max(0, i - 1);
+  }
 
-      for (var i = 0; i < FRAME_COUNT; i++) {
-        (function (idx) {
-          var img = new Image();
-          img.decoding = "async";
-          img.onload = function () {
-            list[idx] = img;
-            loaded++;
-            if (loaded >= FRAME_COUNT) finish();
-          };
-          img.onerror = function () {
-            loaded++;
-            if (loaded >= FRAME_COUNT) finish();
-          };
-          img.src = frameUrl(catIdx, idx);
-        })(i);
-      }
-      setTimeout(finish, 20000);
+  function markReady(catIdx) {
+    var n = 0;
+    var i;
+    for (i = 0; i < FRAME_COUNT; i++) if (cats[catIdx][i]) n++;
+    ready[catIdx] = n > FRAME_COUNT * 0.9;
+  }
+
+  /*
+   * Load early batch first → onEarly (fade in), then the rest.
+   * Keeps network focused so the first chunk arrives ASAP.
+   */
+  function loadCat(catIdx, onEarly) {
+    var i;
+    var early = [];
+    for (i = 0; i < EARLY_FRAMES; i++) early.push(loadFrame(catIdx, i));
+
+    return Promise.all(early).then(function () {
+      earlyReady[catIdx] = playableEnd(catIdx) >= EARLY_FRAMES - 1;
+      if (earlyReady[catIdx] && typeof onEarly === "function") onEarly();
+
+      var rest = [];
+      for (i = EARLY_FRAMES; i < FRAME_COUNT; i++) rest.push(loadFrame(catIdx, i));
+      return Promise.all(rest);
+    }).then(function () {
+      markReady(catIdx);
+      return ready[catIdx];
+    });
+  }
+
+  /* Let VINC1AM / shell paint first, then start cat network. */
+  function afterUi(cb) {
+    requestAnimationFrame(function () {
+      requestAnimationFrame(function () {
+        if (typeof requestIdleCallback === "function") {
+          requestIdleCallback(cb, { timeout: 600 });
+        } else {
+          setTimeout(cb, 0);
+        }
+      });
     });
   }
 
@@ -365,19 +391,22 @@
   }
 
   function step() {
-    var next = frame + dir;
+    var end = playableEnd(cat);
+    if (end <= 0) return;
 
-    if (next > FRAME_COUNT - 1) {
+    var next = frame + dir;
+    if (next > end) {
       dir = -1;
-      next = FRAME_COUNT - 2;
+      next = Math.max(0, end - 1);
     } else if (next < 0) {
       dir = 1;
-      next = 1;
+      next = end > 0 ? 1 : 0;
     }
 
     frame = next;
 
-    if (frame === SWITCH_FRAME) {
+    /* Only attempt swap once both cats are largely loaded */
+    if (frame === SWITCH_FRAME && ready[0] && ready[1]) {
       pickCat();
     }
 
@@ -417,10 +446,11 @@
   }
 
   function start() {
+    if (started) return;
+    started = true;
     syncPointerScale();
     draw();
     if (stage) stage.classList.add("is-ready");
-    finishBootStatus();
     if (!reduceMotion) {
       canvas.addEventListener("pointermove", onPointerMove, { passive: true });
       canvas.addEventListener("pointerenter", onPointerMove, { passive: true });
@@ -448,35 +478,25 @@
 
   resumeCat = function () {
     if (reduceMotion || catHidden) return;
-    if (!ready[0] && !ready[1]) return;
+    if (!earlyReady[0] && !earlyReady[1] && !ready[0] && !ready[1]) return;
     lastTs = 0;
     acc = 0;
     if (!raf) raf = requestAnimationFrame(loop);
   };
 
   /*
-   * Staged load: start the randomly chosen cat ASAP, then preload the
-   * other in the background. Switch (~4.3s) only uses a cat that's ready.
+   * 1) Wait for VINC1AM / shell to paint
+   * 2) Load first ~16 frames of primary cat → fade in + play
+   * 3) Keep filling remaining frames; preload the other cat in background
    */
-  (function boot() {
+  afterUi(function () {
     var primary = cat;
     var secondary = cat ^ 1;
 
-    loadCat(primary).then(function (ok) {
-      if (!ok) {
-        return loadCat(secondary).then(function (ok2) {
-          if (!ok2) {
-            finishBootStatus();
-            return;
-          }
-          cat = secondary;
-          if (!catHidden) start();
-          else finishBootStatus();
-        });
-      }
+    loadCat(primary, function () {
       if (!catHidden) start();
-      else finishBootStatus();
+    }).then(function () {
       loadCat(secondary);
     });
-  })();
+  });
 })();
