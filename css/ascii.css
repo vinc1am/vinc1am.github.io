@@ -368,15 +368,75 @@ button:focus-visible {
   z-index: 4;
   width: min(58vw, 620px);
   pointer-events: none;
+  /* Progressive: shell shows first; cat fades in when frames are ready */
+  opacity: 0;
   transition:
-    opacity 0.4s var(--ease),
+    opacity 0.55s var(--ease),
     transform 0.45s var(--ease),
     visibility 0.4s;
+}
+
+.corner-cat-stage.is-ready {
+  opacity: 1;
 }
 
 .corner-cat-stage.is-hidden,
 .corner-cat-stage[hidden] {
   display: none !important;
+  opacity: 0;
+}
+
+/*
+ * Minimal loading status — thin right-corner track only.
+ * Shell/UI already visible; this just signals “cat still arriving”.
+ */
+.boot-status {
+  position: absolute;
+  right: clamp(1rem, 3vw, 1.75rem);
+  bottom: clamp(0.85rem, 2.2vh, 1.35rem);
+  z-index: 6;
+  width: 3.25rem;
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity 0.35s var(--ease);
+}
+
+.boot-status.is-done {
+  opacity: 0;
+}
+
+.boot-status__track {
+  display: block;
+  height: 2px;
+  border-radius: 1px;
+  background: rgba(26, 26, 24, 0.1);
+  overflow: hidden;
+}
+
+.boot-status__bar {
+  display: block;
+  width: 40%;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--accent-text);
+  animation: boot-slide 0.9s var(--ease) infinite;
+}
+
+@keyframes boot-slide {
+  0% {
+    transform: translateX(-120%);
+  }
+  100% {
+    transform: translateX(320%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .boot-status__bar {
+    width: 100%;
+    animation: none;
+    opacity: 0.55;
+  }
 }
 
 .corner-cat {

@@ -9,9 +9,19 @@
   /* Fold toggle is independent of canvas boot — bind first */
   var stage = document.getElementById("corner-cat-stage");
   var fold = document.getElementById("cat-fold");
+  var bootStatus = document.getElementById("boot-status");
   var catHidden = false;
   var pauseCat = null; /* set after player boots */
   var resumeCat = null;
+
+  function finishBootStatus() {
+    if (!bootStatus) return;
+    bootStatus.classList.add("is-done");
+    bootStatus.setAttribute("aria-busy", "false");
+    window.setTimeout(function () {
+      if (bootStatus && bootStatus.parentNode) bootStatus.parentNode.removeChild(bootStatus);
+    }, 400);
+  }
 
   function setCatHidden(hidden) {
     catHidden = !!hidden;
@@ -409,6 +419,8 @@
   function start() {
     syncPointerScale();
     draw();
+    if (stage) stage.classList.add("is-ready");
+    finishBootStatus();
     if (!reduceMotion) {
       canvas.addEventListener("pointermove", onPointerMove, { passive: true });
       canvas.addEventListener("pointerenter", onPointerMove, { passive: true });
@@ -453,12 +465,17 @@
     loadCat(primary).then(function (ok) {
       if (!ok) {
         return loadCat(secondary).then(function (ok2) {
-          if (!ok2) return;
+          if (!ok2) {
+            finishBootStatus();
+            return;
+          }
           cat = secondary;
           if (!catHidden) start();
+          else finishBootStatus();
         });
       }
       if (!catHidden) start();
+      else finishBootStatus();
       loadCat(secondary);
     });
   })();

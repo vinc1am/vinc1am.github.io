@@ -708,10 +708,10 @@
     startIdleFlicker();
   }
 
+  /* Paint ASAP with fallback mono; refine once webfonts settle */
+  boot();
   if (document.fonts && document.fonts.ready) {
-    document.fonts.ready.then(boot).catch(boot);
-  } else {
-    boot();
+    document.fonts.ready.then(boot).catch(function () {});
   }
 
   /**
