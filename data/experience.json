@@ -1,12 +1,12 @@
 {
   "experience": [
-    {
-      "year": "Present",
-      "kind": "Career",
-      "role": "AI & ML Delivery",
-      "org": "Amazon Web Services",
-      "logo": "assets/logos/aws.png?v=2",
-      "text": "AI and machine learning delivery for cloud customers and partners."
+   {
+      "_year": "Present",
+      "_kind": "Career",
+      "_role": "AI & ML Delivery",
+      "_org": "Amazon Web Services",
+      "_logo": "assets/logos/aws.png?v=2",
+      "_text": "AI and machine learning delivery for cloud customers and partners."
     },
     {
       "year": "Nov 2026",
